@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Join Agent Commons to share agentic AI projects, ask technical questions, and find collaborators. Browse freely or join as a guest to post.">
+  <meta name="theme-color" content="#f8f7f4">
+  <title>Agent Commons | Agentic AI Project Board</title>
+  <link rel="canonical" href="https://agentcommons.talentedlemur64.chatgpt.site/">
+  <meta property="og:site_name" content="Agent Commons">
+  <meta property="og:title" content="Agent Commons | Agentic AI Project Board">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://agentcommons.talentedlemur64.chatgpt.site/">
+  <link rel="stylesheet" href="/styles.css?v=13">
+  <script src="/app.js?v=12" type="module"></script>
+  <script src="/robot.js?v=4" defer></script>
+  <script src="/swipe.js?v=13" defer></script>
+</head>
+<body id="top" data-swipe-nav>
+  <a class="skip" href="#board">Skip to posts</a>
+  <header class="header">
+    <div class="wrap header-inner">
+      <a class="brand" href="/" aria-label="Agent Commons home"><span class="logo" aria-hidden="true"><i></i></span><span>agent<span class="brand-accent">commons</span><span class="brand-dot">.</span></span></a>
+      <nav aria-label="Main navigation" class="nav">
+        <a href="#board" id="nav-explore" aria-current="page">Explore</a>
+        <a href="#mine" id="nav-mine">My posts</a>
+        <a href="#projects" id="nav-projects">Project contact</a>
+        <a href="/help">Help</a>
+      </nav>
+      <div class="header-actions">
+        <button class="text-link account account-button" id="account-join" type="button">Join</button>
+        <span class="text-link account" id="account-guest" hidden>Guest</span>
+        <a class="text-link account" id="account" href="/signout-with-chatgpt?return_to=%2F" target="_top" hidden>Sign out</a>
+        <button class="button button-dark compact" type="button" data-compose><span class="plus" aria-hidden="true">+</span> New post</button>
+      </div>
+    </div>
+  </header>
+  <main class="wrap">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy" data-reveal>
+        <p class="eyebrow"><span class="mini-network" aria-hidden="true">✳</span> THE AGENTIC AI COMMUNITY</p>
+        <h1 id="hero-title">Build better agents,<br><em>together.</em></h1>
+        <p class="hero-intro">Share what you’re building, get unstuck, and find people who want to tackle the same problems.</p>
+        <div class="hero-actions"><button class="button button-purple" type="button" data-compose><span class="plus" aria-hidden="true">+</span> Post a problem</button><a class="button button-quiet" href="#board">Explore the board</a></div>
+        <p class="swipe-tip">Swipe left for Explore. Swipe back to return.</p>
+      </div>
+      <div class="hero-visual" aria-hidden="true"><div class="visual-grid"></div><img src="/assets/workflow.webp" alt="" width="1120" height="747" fetchpriority="high"></div>
+    </section>
+
+    <section id="board" class="board" aria-labelledby="board-title">
+      <div class="board-head"><div><h2 id="board-title">Project board</h2><p id="board-subtitle">Problems to solve, ideas to test, and projects to join.</p></div>
+      <label class="search"><span class="search-glyph" aria-hidden="true"></span><span class="sr-only">Search posts</span><input type="search" id="search" placeholder="Search posts"></label></div>
+      <div class="board-tools"><div class="filters" id="filters" aria-label="Filter by topic"></div><label class="sort"><span class="sr-only">Sort posts</span><select id="sort"><option value="recent">Most recent</option><option value="active">Most discussed</option></select></label></div>
+      <p id="board-status" class="sr-only" role="status"></p>
+      <div id="posts" class="posts"><p class="loading">Loading posts…</p></div>
+      <button class="button button-quiet more" type="button" id="more" hidden>Load more</button>
+    </section>
+    <section id="starters" class="starters" aria-labelledby="starters-title" data-reveal>
+      <div class="starters-head">
+        <h2 id="starters-title">Start with a template</h2>
+        <p>Pick the kind of post you want to write. We’ll put a few prompts in your draft.</p>
+      </div>
+      <div class="starter-grid">
+        <article class="starter-card">
+          <div class="topic-icon" data-topic="evaluation" aria-hidden="true">◫</div>
+          <h3>Debug an agent</h3>
+          <p>Share the expected behavior, what went wrong, and the smallest example someone can try.</p>
+          <button class="button button-quiet" type="button" data-compose="problem" data-starter="debug">Use problem template</button>
+        </article>
+        <article class="starter-card">
+          <div class="topic-icon" data-topic="orchestration" aria-hidden="true">⌘</div>
+          <h3>Find collaborators</h3>
+          <p>Describe what you’re building, the work that’s ready to start, and the skills you’re looking for.</p>
+          <button class="button button-quiet" type="button" data-compose="project" data-starter="collaborate">Use project template</button>
+        </article>
+        <article class="starter-card">
+          <div class="topic-icon" data-topic="tooling" aria-hidden="true">✦</div>
+          <h3>Pitch an idea</h3>
+          <p>Explain the problem your idea could solve and propose a small first experiment to test it.</p>
+          <button class="button button-quiet" type="button" data-compose="idea" data-starter="pitch">Use idea template</button>
+        </article>
+      </div>
+    </section>
+    <section id="projects" class="project-contact" aria-labelledby="projects-title" data-reveal>
+      <div>
+        <h2 id="projects-title">Project contact</h2>
+        <p>Looking for collaborators? Start a project post so builders can reply in the discussion. To join an existing project, reply on its post.</p>
+      </div>
+      <button class="button button-purple" type="button" data-compose="project"><span class="plus" aria-hidden="true">+</span> Start a project post</button>
+    </section>
+  </main>
+  <div class="robot-rail" data-robot-rail aria-hidden="true"><div class="robot"><div class="robot-art"><div class="robot-head"></div><div class="robot-body"></div></div></div></div>
+  <footer class="wrap footer"><a class="brand small" href="/"><span class="logo" aria-hidden="true"><i></i></span><span>agent<span class="brand-accent">commons</span><span class="brand-dot">.</span></span></a><span class="footer-credit">Made and maintained by Mehakdeep</span></footer>
+
+  <dialog id="compose" aria-labelledby="compose-title">
+    <form id="post-form" class="dialog-inner">
+      <div class="dialog-head"><h2 id="compose-title">New post</h2><button class="close" type="button" data-close aria-label="Close dialog">×</button></div>
+      <p class="dialog-intro">Tell other builders what you’re working on and where they can help.</p>
+      <div class="form-columns"><label>Post type<select name="kind" required><option value="problem">Problem</option><option value="project">Project</option><option value="idea">Idea</option></select></label><label>Topic<select name="topic" id="post-topic" required></select></label></div>
+      <label>Title<input name="title" minlength="8" maxlength="100" required placeholder="What are you trying to solve?"></label>
+      <label>Details<textarea name="body" rows="5" minlength="20" maxlength="3000" required placeholder="Describe your goal, what you’ve tried, and what kind of help would be useful."></textarea></label>
+      <p class="form-note">You’ll post under a generated builder name. Keep personal contact details out of posts.</p>
+      <p class="form-error" role="alert" hidden></p>
+      <div class="dialog-actions"><button class="button button-quiet" type="button" data-close>Cancel</button><button class="button button-purple" type="submit">Publish post</button></div>
+    </form>
+  </dialog>
+
+  <dialog id="thread" aria-labelledby="thread-title">
+    <div class="dialog-inner"><div class="dialog-head thread-head"><div id="thread-badges" class="badges"></div><button class="close" type="button" data-close aria-label="Close discussion">×</button></div><h2 id="thread-title">Discussion</h2><div id="thread-content"></div></div>
+  </dialog>
+
+  <dialog id="join" aria-labelledby="join-title">
+    <div class="dialog-inner">
+      <div class="dialog-head"><h2 id="join-title">Join the discussion</h2><button class="close" type="button" data-close aria-label="Close dialog">×</button></div>
+      <p class="dialog-intro">Join as a guest to post and reply under a generated name. Use this browser to manage your posts.</p>
+      <p class="form-error" id="join-error" role="alert" hidden></p>
+      <div class="dialog-actions"><button class="button button-quiet" type="button" data-close>Cancel</button><button class="button button-purple" id="join-guest" type="button">Join as guest</button></div>
+      <a class="guest-existing" id="join-link" target="_top" href="/signin-with-chatgpt?return_to=%2F">Manage existing ChatGPT posts</a>
+    </div>
+  </dialog>
+  <dialog id="delete-confirm" aria-labelledby="delete-title" aria-describedby="delete-description">
+    <form class="dialog-inner" method="dialog">
+      <h2 id="delete-title">Delete this post?</h2>
+      <p id="delete-description" class="dialog-intro"></p>
+      <div class="dialog-actions">
+        <button class="button button-quiet" value="cancel" autofocus>Cancel</button>
+        <button class="button button-danger" id="delete-submit" value="delete">Delete post</button>
+      </div>
+    </form>
+  </dialog>
+</body>
+</html>
